@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Form</title>
+</head>
+<body>
+<div align="center">
+    <h1>User Registration</h1>
+    <form action="#" th:action="@{/send}" method="post" th:object="${Model}">
+        <label>Age:</label>
+        <input type="text" th:field="*{Age}" /><br/>
+ 
+        <label>Embarked:</label>
+        <input type="radio" th:field="*{Embarked}" value="S" />S
+        <input type="radio" th:field="*{Embarked}" value="C" />C<br/>
+ 
+       <label>Sex:</label>
+        <input type="radio" th:field="*{Sex}" value="male" />Male
+        <input type="radio" th:field="*{Sex}" value="female" />Female<br/>
+ 
+ 
+        <button type="submit">Predict</button>    
+    </form>
+</div>
+</body>
+</html>
